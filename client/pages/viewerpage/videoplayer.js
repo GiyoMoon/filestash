@@ -52,7 +52,7 @@ export function VideoPlayer({ filename, data, path }) {
         }
         const sources = window.overrides["video-map-sources"]([{
             src: data,
-            type: getMimeType(data),
+            type: getMimeType(filename),
         }]);
         setVideoSources(sources.map((source) => {
             if (source.type !== "application/x-mpegURL" && source.type !== "application/vnd.apple.mpegurl") return source;
